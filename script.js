@@ -72,7 +72,6 @@ var datacount =0;
     
       submitButton.addEventListener("click", driver);
       
-// submitButton.addEventListener("click" , driver);
 
 function driver(){
     var oprator =0;
@@ -138,15 +137,13 @@ function start()
         const array = data.split("");
         if(count > (array.length+1)){
             answerBox.innerHTML="Mission Successful";
-            sms.innerHTML = "postfix expression : " + "' " + arr.join("") +" '" ;
+            sms.innerHTML = "postfix expression : " + arr.join("");
             finalAns.innerHTML = arr.join("");
             return;
         }
         if(count == array.length+1){
             while(!isEmptystack()){
-                //  answerBox.innerHTML="MISSION SUCCESSFUL";
-                 sms.innerHTML = "postfix expression : " + "' " + arr.join("") +" '" ;
-                 
+                 sms.innerHTML = "postfix expression : "+ arr.join("");
                  printalpha(peekfromstack());
                  opratorStack.removeChild(opratorStack.lastElementChild);
                  removefromstack();
